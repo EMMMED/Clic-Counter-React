@@ -22,22 +22,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .logo-cactus{
-  width: 100px;
-  animation: rotation 5s infinite linear;
+  height: 135px;
 }
 
-@keyframes rotation {
-  from{
-    transform: rotate(0deg)
-  }
-  to{
-    transform: rotate(359deg)
-  }
-}
 
 .clic-container {
   height: 550px;

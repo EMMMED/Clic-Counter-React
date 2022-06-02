@@ -1,6 +1,6 @@
 import './App.css';
 import Button from './Components/Buttons';
-import logoCactus from './img/logo-cactus.png'
+import Emmmed from './img/emmmed.png'
 import Counter from './Components/Counter'
 import { useState } from 'react';
 
@@ -21,7 +21,7 @@ function App() {
       <div className='logo-container'>
         <img
         className='logo-cactus' 
-        src={logoCactus} 
+        src={Emmmed} 
         alt="logo-cactus" />
       </div>
       <div className='count'>
