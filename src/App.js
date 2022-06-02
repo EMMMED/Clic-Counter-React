@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from './Components/Buttons';
+import logoCactus from './img/logo-cactus.png'
+import Counter from './Components/Counter'
+import { useState } from 'react';
 
 function App() {
+
+  const [count, setCount] = useState(0)
+
+  const clicHandler = () => {
+    setCount(count + 1)
+  }
+
+  const restartCounter = () => {
+    setCount(0)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='logo-container'>
+        <img
+        className='logo-cactus' 
+        src={logoCactus} 
+        alt="logo-cactus" />
+      </div>
+      <div className='count'>
+      </div>
+      <div className='clic-container'>
+        <Counter 
+        numClic={count} />
+        <Button
+          texto='Clic'
+          isClic={true}
+          clicHandler={clicHandler}
+        />
+        <Button
+          texto='Restart'
+          isClic={false}
+          clicHandler={restartCounter}
+        />
+      </div>
+      <footer>
+        <h3>COUNTER APP, by EMMMED</h3>
+      </footer>
     </div>
   );
 }
